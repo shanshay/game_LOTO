@@ -40,7 +40,7 @@ while True:
                 sys.exit()
             elif reply == 'д':
                 if gamer.test:
-                    gamer.print_using_cards()
+                    gamer.print_cards()
                     gamer.test = False
                 else:
                     print('Плохой выбор. Игра окончена!!!')
@@ -56,11 +56,11 @@ while True:
                     print(f'Вы набрали {gamer.count} очков')
                     sys.exit()
                 else:
-                    gamer.print_using_cards()
+                    gamer.print_cards()
                     gamer.test = False
 
             computer.check_num_in_card(barrel_in_game.step)
-            computer.print_using_cards()
+            computer.print_cards()
 
     elif choice == '2':
         name_of_gamer_01 = input('Введите имя игрока ')
@@ -89,7 +89,7 @@ while True:
                 sys.exit()
             elif reply == 'д':
                 if gamer_01.test:
-                    gamer_01.print_using_cards()
+                    gamer_01.print_cards()
                     gamer_01.test = False
                 else:
                     print(f'Плохой выбор. Выиграл {gamer_02.name} Игра окончена!!!')
@@ -105,7 +105,7 @@ while True:
                     print(f'{gamer_02.name} набрал {gamer_02.count} очков')
                     sys.exit()
                 else:
-                    gamer_02.print_using_cards()
+                    gamer_02.print_cards()
                     gamer_01.test = False
             else:
                 print('Неверный ввод')
@@ -121,7 +121,7 @@ while True:
                 sys.exit()
             elif reply == 'д':
                 if gamer_02.test:
-                    gamer_02.print_using_cards()
+                    gamer_02.print_cards()
                     gamer_02.test = False
                 else:
                     print(f'Плохой выбор. Выиграл {gamer_01.name} Игра окончена!!!')
@@ -137,7 +137,7 @@ while True:
                     print(f'{gamer_02.name} набрал {gamer_02.count} очков')
                     sys.exit()
                 else:
-                    gamer_02.print_using_cards()
+                    gamer_02.print_cards()
                     gamer_02.test = False
             else:
                 print('Неверный ввод')
@@ -164,8 +164,8 @@ while True:
             barrel_in_game.show_barrel()
             computer_01.check_num_in_card(barrel_in_game.step)
             computer_02.check_num_in_card(barrel_in_game.step)
-            computer_01.print_using_cards()
-            computer_02.print_using_cards()
+            computer_01.print_cards()
+            computer_02.print_cards()
 
     elif choice == '4':
         sys.exit()
