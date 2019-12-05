@@ -26,26 +26,9 @@ class Gamer:
         for i in list_of_cards:
             for j in i:
                 self.new_card.append(j)
-        return self.new_card
+        return self.new_card   
 
-    def print_cards(self):  # распечатка карты без запятых и скобочек
-        # вызывать только 1 раз в начале игры
-        print(colored(f"{self.name}s card: ", 'red'))
-        temp_list = [self.new_card[0:9], self.new_card[9:18], self.new_card[18:27]]
-        print('--------------------------')
-        for i in temp_list:
-            line_str = ''
-            for num in i:
-                if num == 0:
-                    line_str = f'{line_str} '
-                elif num > 10:
-                    line_str = f'{line_str} {num} '
-                else:
-                    line_str = f'{line_str}{num} '
-            print(line_str.rstrip())
-        print('--------------------------')
-
-    def print_using_cards(self):  # вывести на экран измененную карту во время игры
+    def print_cards(self):  # вывести на экран измененную карту во время игры
         # вызывать только эту функцию во время игры
         print(colored(f"{self.name}s card: ", 'red'))
         temp_list = [self.new_card[0:9], self.new_card[9:18], self.new_card[18:27]]
